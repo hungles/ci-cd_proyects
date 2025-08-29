@@ -47,7 +47,9 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/ci-cd-app:latest .
+        run: |
+          cd actions/
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/ci-cd-app:latest .
 
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKER_USERNAME }}/ci-cd-app:latest
