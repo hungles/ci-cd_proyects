@@ -15,3 +15,5 @@ def sum_numbers():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+
+#Debo ejecutarse denuevo el pipeline porque he cambiado el path de ejecucion
