@@ -3,8 +3,12 @@ name: CI/CD Python 3.10 Pipeline
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - 'actions/**'
   pull_request:
     branches: [ "main" ]
+    paths:
+      - 'actions/**'
 
 jobs:
   build-and-test:
